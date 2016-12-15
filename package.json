@@ -1,0 +1,24 @@
+{
+  "name": "RN-ToDo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Primera aplicacion desarrollada con React Native",
+  "keywords": ["ReactJS", "react-native", "redux", "babel", "ios", "android", "cross-platform"],
+  "license": "GNU v3",
+  "author": "Jhonatan Laguna",
+  "contributors": "hendrikswan",
+  "repository": "https://github.com/LagunaISW/RN-ToDo",
+  "bugs": "https://github.com/LagunaISW/RN-ToDo/issues",
+  "scripts": {
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "babel-eslint": "4.1.6",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "2.1.1",
+    "eslint-plugin-react": "3.12.0",
+    "react-native": "0.19.0",
+    "react-native-swipeout": "2.0.12",
+    "redux": "3.3.1"
+  }
+}
