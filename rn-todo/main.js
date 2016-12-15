@@ -1,12 +1,9 @@
 import Exponent from 'exponent';
 import React from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
+import TaskList from './TaskList';
 
 class PluralTodo extends React.Component {
-    constructor(props, context){
+    constructor(props, context) {
         super(props, context);
         this.state = {
 
@@ -14,10 +11,8 @@ class PluralTodo extends React.Component {
     }
 
     render() {
-      return (
-        <View>
-          <Text>Hello MotheFucker!</Text>
-        </View>
+        return (
+          <TaskList />
       );
     }
 }
