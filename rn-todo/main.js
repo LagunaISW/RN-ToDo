@@ -1,6 +1,10 @@
 import Exponent from 'exponent';
 import React from 'react';
 import TaskList from './TaskList';
+import {
+  Navigator,
+  Text,
+} from 'react-native';
 
 class PluralTodo extends React.Component {
     constructor(props, context) {
@@ -18,16 +22,40 @@ class PluralTodo extends React.Component {
     }
 
     onAddStarted() {
-        console.log('Clicked');
+        this.nav.push({
+            name: 'taskform',
+        });
+    }
+
+    renderScene(route, nav) {
+        switch (route.name) {
+        case 'taskform':
+            return <Text>Add form comes here</Text>;
+        default:
+            return (
+                <TaskList
+                    onAddStarted={this.onAddStarted.bind(this)}
+                    todos={this.state.todos}
+                />
+            );
+        }
+    }
+
+    configureScene() {
+        return Navigator.SceneConfigs.FloatFromBottom;
     }
 
     render() {
         return (
-          <TaskList
-              onAddStarted={this.onAddStarted.bind(this)}
-              todos={this.state.todos}
-          />
-      );
+            <Navigator
+                configureScene={this.configureScene}
+                initialRoute={{ name: 'tasklist', index: 0 }}
+                ref={((nav) => {
+                    this.nav = nav;
+                })}
+                renderScene={this.renderScene.bind(this)}
+            />
+        );
     }
 }
 
