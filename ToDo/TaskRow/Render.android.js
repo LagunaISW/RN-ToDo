@@ -5,7 +5,7 @@ import {
   View,
   TouchableHighlight,
   Image,
-  Styleheet,
+  StyleSheet,
   Animated,
 } from 'react-native';
 
@@ -13,13 +13,13 @@ import {
 export default function render(baseStyle) {
     const doneAnimation = new Animated.ValueXY();
 
-    const localStyle = Styleheet.create({
+    const localStyle = StyleSheet.create({
         doneButton: {
             borderRadius: 5,
             padding: 5,
         },
         row: {
-            trasnform: doneAnimation.getTranslateTransform(),
+            transform: doneAnimation.getTranslateTransform(),
         },
     });
 
