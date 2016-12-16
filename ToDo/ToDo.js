@@ -35,12 +35,10 @@ class PluralTodo extends React.Component {
     }
 
     onDone(todo) {
-        console.log('Completed' + todo.task);
-        const filteredTodos =
-            this.state.todos.filter((filterTodo) => {
-                return filterTodo !== todo;
-            });
-        this.setState({ todos: filteredTodos });
+        store.dispatch({
+            type: 'DONE_TODO',
+            todo,
+        });
     }
 
     renderScene(route, nav) {
