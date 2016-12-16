@@ -1,9 +1,9 @@
 import Exponent from 'exponent';
 import React from 'react';
 import TaskList from './TaskList';
+import TaskForm from './TaskForm';
 import {
   Navigator,
-  Text,
 } from 'react-native';
 
 class PluralTodo extends React.Component {
@@ -30,7 +30,7 @@ class PluralTodo extends React.Component {
     renderScene(route, nav) {
         switch (route.name) {
         case 'taskform':
-            return <Text>Add form comes here</Text>;
+            return <TaskForm />;
         default:
             return (
                 <TaskList
@@ -49,7 +49,7 @@ class PluralTodo extends React.Component {
         return (
             <Navigator
                 configureScene={this.configureScene}
-                initialRoute={{ name: 'tasklist', index: 0 }}
+                initialRoute={{ name: 'taskform', index: 0 }}
                 ref={((nav) => {
                     this.nav = nav;
                 })}
