@@ -1,11 +1,10 @@
 import React from 'react';
 
 import {
-  Text,
   StyleSheet,
-  View,
-  TouchableHighlight,
 } from 'react-native';
+
+import Render from './Render';
 
 const styles = StyleSheet.create({
     container: {
@@ -37,18 +36,7 @@ class TaskRow extends React.Component {
     }
 
     render() {
-        return (
-          <View style={styles.container}>
-            <Text style={styles.label}>{this.props.todo.task}</Text>
-
-            <TouchableHighlight
-                onPress={this.onDonePressed.bind(this)}
-                style={styles.doneButton}
-            >
-                <Text>Done</Text>
-            </TouchableHighlight>
-          </View>
-        );
+        return Render.bind(this)(styles);
     }
 }
 

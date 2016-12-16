@@ -1,7 +1,15 @@
 {
-	"name": "ToDo",
-	"version": "0.0.1",
-	"private": true,
+	"name": "rn-todo",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Primera aplicacion desarrollada con React Native",
+    "keywords": ["ReactJS", "react-native", "redux", "babel", "ios", "android", "cross-platform"],
+    "license": "GNU v3",
+    "author": "Jhonatan Laguna",
+    "contributors": "hendrikswan",
+	"homepage": "https://github.com/LagunaISW/RN-ToDo",
+    "repository": "https://github.com/LagunaISW/RN-ToDo",
+    "bugs": "https://github.com/LagunaISW/RN-ToDo/issues",
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
@@ -14,7 +22,12 @@
 		"babel-jest": "18.0.0",
 		"babel-preset-react-native": "1.9.1",
 		"jest": "18.0.0",
-		"react-test-renderer": "15.4.1"
+		"react-test-renderer": "15.4.1",
+		"babel-eslint": "4.1.6",
+	    "eslint": "1.10.3",
+	    "eslint-config-airbnb": "2.1.1",
+	    "eslint-plugin-react": "3.12.0",
+	    "redux": "3.6.0"
 	},
 	"jest": {
 		"preset": "react-native"

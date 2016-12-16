@@ -8,7 +8,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
-import TaskRow from './TaskRow';
+import TaskRow from './TaskRow/Component';
 
 const styles = StyleSheet.create({
     container: {
